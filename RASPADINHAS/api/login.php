@@ -4,13 +4,9 @@ declare(strict_types=1);
 
 header('Content-Type: application/json; charset=utf-8');
 
-// CORS (ajuste os domínios se necessário)
-$allowed = ['http://localhost', 'http://localhost:8000', 'https://raspadinhas-b008f8ce1070.herokuapp.com'];
-$origin  = $_SERVER['HTTP_ORIGIN'] ?? '';
-if (in_array($origin, $allowed, true)) {
-    header("Access-Control-Allow-Origin: $origin");
-    header('Access-Control-Allow-Credentials: true');
-}
+// CORS: Permitir qualquer origem para evitar problemas na VPS
+header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 

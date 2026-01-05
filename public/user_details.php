@@ -1008,7 +1008,7 @@ if (isset($_GET['status'])) {
                 <li><a href="index.php?page=gerenciarpagamentos" class="<?= ($page === 'gerenciarpagamentos') ? 'active' : '' ?>"><i class="bi bi-credit-card-fill"></i> Métodos de Pagamento</a></li>
             </ul>
             <div class="logout-btn">
-                <a href="../logout.php"><i class="bi bi-box-arrow-right"></i> Sair da Conta</a>
+                <a href="logout.php"><i class="bi bi-box-arrow-right"></i> Sair da Conta</a>
             </div>
         </aside>
 

@@ -480,7 +480,7 @@ $dashboard_total_withdrawals = abs($total_withdrawals_amount_stmt->fetchColumn()
 
             </ul>
             <div class="logout-btn">
-                <a href="../logout.php"><i class="bi bi-box-arrow-right"></i> Sair da Conta</a>
+                <a href="logout.php"><i class="bi bi-box-arrow-right"></i> Sair da Conta</a>
             </div>
         </aside>
 
