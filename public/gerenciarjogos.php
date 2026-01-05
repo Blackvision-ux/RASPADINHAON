@@ -372,11 +372,10 @@ unset($_SESSION['form_feedback']);
                 }
 
                 try {
-                    const response = await fetch('/get-game-and-bonus-data.php');
+                    const response = await fetch('get-game-and-bonus-data.php');
                     const result = await response.json();
 
                     if (result.success) {
-
                         // <-- ALTERAÇÃO: Adicionada lógica de ordenação
                         // 1. Ordena a lista de jogos pelo custo da aposta (bet_cost)
                         result.data.games.sort((a, b) => parseFloat(a.bet_cost) - parseFloat(b.bet_cost));
@@ -404,8 +403,8 @@ unset($_SESSION['form_feedback']);
                     }
                 } catch (error) {
                     console.error("Erro ao buscar dados:", error);
-                    gamesTableBody.innerHTML = `<tr><td colspan="3" style="text-align: center;">Erro de conexão.</td></tr>`;
-                    bonusTableBody.innerHTML = `<tr><td colspan="11" style="text-align: center;">Erro de conexão.</td></tr>`;
+                    gamesTableBody.innerHTML = `<tr><td colspan="3" style="text-align: center;">Erro de conexão: ${error.message}</td></tr>`;
+                    bonusTableBody.innerHTML = `<tr><td colspan="11" style="text-align: center;">Erro de conexão: ${error.message}</td></tr>`;
                 }
             };
 

@@ -1,8 +1,10 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 header('Content-Type: application/json; charset=utf-8');
 
-require_once __DIR__ . '/../includes/auth_check.php';
+// require_once __DIR__ . '/../includes/auth_check.php'; // REMOVIDO pois faz redirect e pode causar loops ou headers already sent
 require_once __DIR__ . '/../config/database.php';
 
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
