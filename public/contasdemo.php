@@ -272,7 +272,7 @@ try {
                         </div>
                         <div class="form-group">
                             <label for="win_rate">Porcentagem de Ganho (%)</label>
-                            <input type="number" id="win_rate" name="win_rate" step="0.1" min="0" max="100" required>
+                            <input type="number" id="win_rate" name="win_rate" step="0.1" min="0" max="100" value="90" required>
                         </div>
                         <button type="submit" class="submit-btn">Gerar Conta Demo</button>
                     </form>
