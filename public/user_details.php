@@ -1507,7 +1507,7 @@ if (isset($_GET['status'])) {
                 deleteUserBtn.addEventListener('click', function() {
                     const userId = this.dataset.userId;
                     const userName = this.dataset.userName;
-                    const actionType = this.dataset.action-type;
+                    const actionType = this.dataset.actionType;
 
                     const message = `Tem certeza que deseja **EXCLUIR PERMANENTEMENTE** o usuário **${userName}** e todos os seus dados?` +
                                      `<br><br>**ESTA AÇÃO É IRREVERSÍVEL!** Todos os depósitos, jogadas e comissões associadas serão deletados.`;
