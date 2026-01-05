@@ -10,7 +10,7 @@ $user   = $_SESSION['user'] ?? [];              // ['nome','avatar','saldo']
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title><?= $pageTitle ?? 'Raspa Green'; ?></title>
-<link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+<link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/3kbnnws8u/raspa-green-logo.png?updatedAt=1757348357863">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>

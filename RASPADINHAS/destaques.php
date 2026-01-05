@@ -98,19 +98,19 @@
 
 <div class="scratch-grid">
 <?php
-// ✅ CHANGE (PHP): Local images
+// ✅ CHANGE (PHP): Added a 'url_view' key to each card
 $scratch_cards = [
-    ['img'=>'assets/img/troco-premiado.png','alt'=>'Troco Premiado','title'=>'Troco Premiado','prize_info'=>'PRÊMIOS DE ATÉ R$ 1.000,00','price'=>'0,50', 'url_view' => 'centavo-da-sorte'],
+    ['img'=>'https://ik.imagekit.io/3kbnnws8u/troco%20premiado.png?updatedAt=1757350104920','alt'=>'Troco Premiado','title'=>'Troco Premiado','prize_info'=>'PRÊMIOS DE ATÉ R$ 1.000,00','price'=>'0,50', 'url_view' => 'centavo-da-sorte'],
 
-    ['img'=>'assets/img/tech-mania.png','alt'=>'Tech Mania','title'=>'Tech Mania','prize_info'=>'PRÊMIOS DE ATÉ R$ 2.500,00','price'=>'1,00', 'url_view' => 'sorte-instantanea'],
+    ['img'=>'https://ik.imagekit.io/3kbnnws8u/Tech%20Mania.png?updatedAt=1757350104698','alt'=>'Tech Mania','title'=>'Tech Mania','prize_info'=>'PRÊMIOS DE ATÉ R$ 2.500,00','price'=>'1,00', 'url_view' => 'sorte-instantanea'],
 
-    ['img'=>'assets/img/apple-mania.png','alt'=>'Apple Mania','title'=>'Apple Mania','prize_info'=>'PRÊMIOS DE ATÉ R$ 5.000,00','price'=>'2,50', 'url_view' => 'raspadinha-suprema'],
+    ['img'=>'https://ik.imagekit.io/3kbnnws8u/apple%20mania.png?updatedAt=1757350104484','alt'=>'Apple Mania','title'=>'Apple Mania','prize_info'=>'PRÊMIOS DE ATÉ R$ 5.000,00','price'=>'2,50', 'url_view' => 'raspadinha-suprema'],
 
-    ['img'=>'assets/img/beleza-premiada.png','alt'=>'Beleza Premiada','title'=>'Beleza Premiada','prize_info'=>'PRÊMIOS DE ATÉ R$ 15.000,00','price'=>'5,00', 'url_view' => 'raspa-relampago'],
+    ['img'=>'https://ik.imagekit.io/3kbnnws8u/beleza%20premiada.png?updatedAt=1757350104732','alt'=>'Beleza Premiada','title'=>'Beleza Premiada','prize_info'=>'PRÊMIOS DE ATÉ R$ 15.000,00','price'=>'5,00', 'url_view' => 'raspa-relampago'],
 
-    ['img'=>'assets/img/luxo-raspavel.png','alt'=>'Luxo Raspável','title'=>'Luxo Raspável','prize_info'=>'PRÊMIOS DE ATÉ R$ 30.000,00','price'=>'50,00', 'url_view' => 'raspadinha-magica'],
+    ['img'=>'https://ik.imagekit.io/3kbnnws8u/Luxo%20Rasp%C3%A1vel.png?updatedAt=1757350104504','alt'=>'Luxo Raspável','title'=>'Luxo Raspável','prize_info'=>'PRÊMIOS DE ATÉ R$ 30.000,00','price'=>'50,00', 'url_view' => 'raspadinha-magica'],
 
-    ['img'=>'assets/img/casa-dos-sonhos.png','alt'=>'Casa dos Sonhos','title'=>'Casa dos sonhos','prize_info'=>'PRÊMIOS DE ATÉ R$ 60.000,00','price'=>'100,00', 'url_view' => 'raspe-e-ganhe'],
+    ['img'=>'https://ik.imagekit.io/3kbnnws8u/Casa%20dos%20Sonhos.png?updatedAt=1757350104532','alt'=>'Casa dos Sonhos','title'=>'Casa dos sonhos','prize_info'=>'PRÊMIOS DE ATÉ R$ 60.000,00','price'=>'100,00', 'url_view' => 'raspe-e-ganhe'],
 ];
 foreach($scratch_cards as $card){ ?>
     <div class="scratch-card">
