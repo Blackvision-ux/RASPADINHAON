@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS users (
     is_demo BOOLEAN DEFAULT FALSE,
     demo_win_rate INT DEFAULT 50,
     is_blocked BOOLEAN DEFAULT FALSE,
+    referrer_id INT REFERENCES users(id) ON DELETE SET NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
