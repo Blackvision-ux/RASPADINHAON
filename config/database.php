@@ -18,7 +18,7 @@ $dbopts = parse_url($dbUrl);
 
 // 3. Extrai cada parte da conexão
 $host = $dbopts['host'];
-$port = $parts['port'] ?? '5432'; // Usa a porta padrão 5432 se a URL não especificar
+$port = $dbopts['port'] ?? '5432'; // Usa a porta padrão 5432 se a URL não especificar
 $username = $dbopts['user'];
 $password = $dbopts['pass'];
 // O nome do banco de dados vem no 'path', mas com uma '/' no início. Removemos ela.

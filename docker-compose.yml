@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      - DATABASE_URL=postgres://postgres:securepassword@db:5432/raspadinha_db
+      # Adicione outras variáveis de ambiente necessárias aqui
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=securepassword
+      - POSTGRES_DB=raspadinha_db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
