@@ -45,6 +45,19 @@ try {
             $success = $stmt->rowCount() > 0;
             break;
 
+        case 'update_global_win_rate':
+            $global_win_rate = filter_input(INPUT_POST, 'global_win_rate', FILTER_VALIDATE_FLOAT);
+            if ($global_win_rate === false || $global_win_rate < 0 || $global_win_rate > 100) {
+                $message = 'Taxa de ganho global inválida. Deve ser um número entre 0 e 100.';
+                break;
+            }
+            $stmt = $pdo->prepare("UPDATE users SET demo_win_rate = ?, updated_at = NOW() WHERE is_demo = TRUE");
+            $stmt->execute([$global_win_rate]);
+            $affected_rows = $stmt->rowCount();
+            $message = "Taxa de ganho atualizada para {$affected_rows} contas demo com sucesso.";
+            $success = true;
+            break;
+
         case 'change_password':
             $new_password = $_POST['new_password'] ?? '';
             if (empty($new_password)) {

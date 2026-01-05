@@ -278,6 +278,21 @@ try {
                     </form>
                 </div>
 
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h2>Definir Taxa de Ganho Global</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Esta ação atualizará a porcentagem de ganho de <strong>TODAS</strong> as contas demo existentes para o valor definido abaixo.</p>
+                    <form method="POST" action="manage_demo_account.php" onsubmit="return confirm('Tem certeza que deseja alterar a taxa de ganho de TODAS as contas demo?');">
+                        <input type="hidden" name="action" value="update_global_win_rate">
+                        <div class="form-group" style="display: flex; gap: 1rem; align-items: flex-end;">
+                            <div style="flex-grow: 1;">
+                                <label for="global_win_rate">Nova Taxa Global (%)</label>
+                                <input type="number" id="global_win_rate" name="global_win_rate" step="0.1" min="0" max="100" value="90" required>
+                            </div>
+                            <button type="submit" class="submit-btn" style="width: auto;">Aplicar para Todos</button>
+                        </div>
+                    </form>
+                </div>
+
                 <div class="card">
                     <h2>Contas Demo Existentes</h2>
                     <div class="table-container">
