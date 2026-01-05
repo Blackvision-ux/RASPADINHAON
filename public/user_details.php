@@ -1515,7 +1515,7 @@ if (isset($_GET['status'])) {
                     showConfirmationModal(message, function() {
                         const form = document.createElement('form');
                         form.method = 'POST';
-                        form.action = '/manage_user.php';
+                        form.action = 'manage_user.php';
 
                         const actionInput = document.createElement('input');
                         actionInput.type = 'hidden';
@@ -1555,7 +1555,7 @@ if (isset($_GET['status'])) {
                     showConfirmationModal(message, function() {
                         const form = document.createElement('form');
                         form.method = 'POST';
-                        form.action = '/manage_user.php';
+                        form.action = 'manage_user.php';
 
                         const actionInput = document.createElement('input');
                         actionInput.type = 'hidden';

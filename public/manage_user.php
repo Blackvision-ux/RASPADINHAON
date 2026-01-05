@@ -4,7 +4,7 @@ require_once __DIR__ . '/../includes/auth_check.php';
 require_once __DIR__ . '/../config/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Location: ../index.php?page=dashboard");
+    header("Location: index.php?page=dashboard");
     exit();
 }
 
@@ -12,7 +12,7 @@ global $pdo;
 
 $action = $_POST['action'] ?? '';
 $user_id = filter_input(INPUT_POST, 'user_id', FILTER_VALIDATE_INT);
-$redirect_to = $_POST['redirect_to'] ?? '../index.php?page=usuarios';
+$redirect_to = $_POST['redirect_to'] ?? 'index.php?page=usuarios';
 
 if (!$user_id) {
     header("Location: " . $redirect_to . "&status=error&message=" . urlencode("ID de usuário inválido."));
@@ -50,7 +50,7 @@ try {
         $stmt_user->execute([$user_id]);
 
         $pdo->commit(); // Confirma todas as exclusões
-        header("Location: ../index.php?page=usuarios&status=success&message=" . urlencode("Usuário excluído com sucesso."));
+        header("Location: index.php?page=usuarios&status=success&message=" . urlencode("Usuário excluído com sucesso."));
         exit();
 
     } elseif ($action === 'toggle_block_user') {

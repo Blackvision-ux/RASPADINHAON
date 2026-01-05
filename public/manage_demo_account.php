@@ -6,7 +6,7 @@ require_once __DIR__ . '/../config/database.php';
 
 // Redireciona se a requisição não for POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Location: /index.php?page=contasdemo");
+    header("Location: index.php?page=contasdemo");
     exit();
 }
 
@@ -17,7 +17,7 @@ $user_id = filter_input(INPUT_POST, 'user_id', FILTER_VALIDATE_INT);
 $action = $_POST['action'] ?? '';
 
 // O redirect_to é sempre a página de contas demo
-$redirect_to = '/index.php?page=contasdemo';
+$redirect_to = 'index.php?page=contasdemo';
 
 if ($user_id === false || empty($action)) {
     $_SESSION['form_feedback'] = [
